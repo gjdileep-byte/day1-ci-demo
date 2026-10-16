@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'docker-azure-cli' }
+  agent { label 'agent any' }
 
   environment {
     REGISTRY = 'demoapp1234-gve4d0a6huhxchgu.azurecr.io'
