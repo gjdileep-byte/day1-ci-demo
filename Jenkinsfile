@@ -2,9 +2,11 @@ pipeline {
   agent { label 'docker-azure-cli' }
 
   environment {
-    REGISTRY = 'demoapp1234-gve4d0a6huhxchgu.azurecr.io'
-    IMAGE    = 'day1-demo'
-  }
+  REGISTRY  = 'demoapp1234-gve4d0a6huhxchgu.azurecr.io'
+  IMAGE     = 'day1-demo'
+  JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+  PATH      = "${JAVA_HOME}/bin:${env.PATH}"
+}
 
   stages {
     stage('Checkout') {
